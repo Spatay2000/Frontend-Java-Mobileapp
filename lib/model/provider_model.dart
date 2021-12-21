@@ -2,26 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:java_spring_frontend/screens/add_pages/change_page.dart';
 import 'package:java_spring_frontend/screens/chat_pages/chat_page.dart';
 import 'package:java_spring_frontend/screens/home_pages/main_page.dart';
+import 'package:java_spring_frontend/screens/home_pages/sales_list.dart';
 import 'package:java_spring_frontend/screens/login_pages/login_page.dart';
 import 'package:java_spring_frontend/screens/login_pages/welcome_pages.dart';
+import 'package:java_spring_frontend/screens/shop_page/shop_list.dart';
 
 class DataProvider extends ChangeNotifier {
   String appBarTitle = '7food на карте';
   var _bottomNavIndex = 0;
 
   List<Widget> _pages = [
-    MainPage(),
-    LoginPage(),
+    FridgeList(),
+    ShopPage(),
     ChatPage(),
     ChangePage()
     // ShowcaseItems(0),
   ];
 
   List<String> _appBarTitles = [
-    'В Продаже',
-    'Туда',
-    'Чат',
-    'Профиль',
+    'Popular Market',
+    'Shop address',
+    'Chat',
+    'Change info about sales',
   ];
 
   List<String> get appBarTitles => _appBarTitles;

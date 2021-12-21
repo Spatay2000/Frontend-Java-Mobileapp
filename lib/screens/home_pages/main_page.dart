@@ -14,8 +14,9 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     DataProvider dataProvider = Provider.of<DataProvider>(context);
-    return Scaffold(
-      body: FridgeList(),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: FridgeList(),
     );
   }
 }

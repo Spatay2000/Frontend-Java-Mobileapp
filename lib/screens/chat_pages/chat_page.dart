@@ -20,14 +20,14 @@ class ChatPage extends StatelessWidget {
                       bottomRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20))),
               child: Text(
-                'Здравствуйте! \nПоддержку мы осуществляем через популярные мессенджеры',
+                'Hello! \we provide support through popular messengers',
                 style: TextStyle(color: Colors.white),
               )),
           Spacer(),
           Container(
               padding: EdgeInsets.symmetric(vertical: 10, horizontal: 31),
               child: Text(
-                  'Выберите, пожалуйста, наиболее удобное приложение для Вас и напишите сообщение!')),
+                  'Please choose the most convenient application for you and write a message!')),
           FlatButton(
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
@@ -41,7 +41,7 @@ class ChatPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   Text(
-                    ' Написать в WhatsApp',
+                    ' Write in WhatsApp',
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
@@ -65,7 +65,7 @@ class ChatPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   Text(
-                    ' Написать в Telegram',
+                    ' Write in Telegram',
                     style: TextStyle(color: Colors.white),
                   ),
                 ],

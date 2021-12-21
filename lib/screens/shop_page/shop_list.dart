@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:java_spring_frontend/model/sales_product_model.dart';
-import 'package:java_spring_frontend/service/sales_service.dart';
+import 'package:java_spring_frontend/model/shop_model.dart';
+import 'package:java_spring_frontend/service/shop_service.dart';
 import 'package:java_spring_frontend/utilities/widgets.dart';
 
-class FridgeList extends StatelessWidget {
-  Future<List<SalesModel>> showcaseInfo = SalesService().getSales();
+class ShopPage extends StatefulWidget {
+  ShopPage({Key? key}) : super(key: key);
 
+  @override
+  _ShopPageState createState() => _ShopPageState();
+}
+
+class _ShopPageState extends State<ShopPage> {
+  Future<List<ShopModel>> showcaseInfo = ShopService().getSales();
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -18,7 +24,7 @@ class FridgeList extends StatelessWidget {
             left: 10,
             right: 10,
           ),
-          child: FutureBuilder<List<SalesModel>>(
+          child: FutureBuilder<List<ShopModel>>(
               future: showcaseInfo,
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
@@ -34,9 +40,8 @@ class FridgeList extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [getBoxShadow()],
                         ),
-                        child: getShowcaseCards(
+                        child: getShowcasesCards(
                           snapshot.data![index].salesProduct,
-                          snapshot.data![index].value,
                           context,
                         ),
                       );

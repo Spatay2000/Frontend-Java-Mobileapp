@@ -18,7 +18,7 @@ class UserService {
     var body =
         jsonEncode({"username": "$phoneNumber", "password": "$password"});
     http.Response response = await http.post(
-        Uri.parse('http://192.168.1.7:9099/auth/signin'),
+        Uri.parse('http://192.168.1.3:9099/auth/signin'),
         headers: headers,
         body: body);
 
@@ -43,7 +43,7 @@ class UserService {
       "role": "[user]"
     });
     http.Response response = await http.post(
-        Uri.parse('http://192.168.1.7:9099/auth/signup'),
+        Uri.parse('http://192.168.1.3:9099/auth/signup'),
         headers: headers,
         body: body);
 

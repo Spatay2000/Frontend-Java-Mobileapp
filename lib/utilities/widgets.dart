@@ -77,14 +77,31 @@ Card getShowcaseCards(String name, double value, context) {
     child: ListTile(
       leading: kMainFridgeImage,
       title: Text(
-        'Имя: $name',
+        'Name: $name',
         // snapshot.data!.data[index].name,
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
       subtitle: Text(
-        'Цена: $value',
+        'Price: $value tenge',
         // snapshot.data!.data[index].address,
         style: TextStyle(fontSize: 10),
+      ),
+
+      // ShowcaseService().getShowcaseItems(snapshot.data!.data[index].id, context);
+      // snapshot.data!.data[index].id
+    ),
+  );
+}
+
+Card getShowcasesCards(String name, context) {
+  return Card(
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+    child: ListTile(
+      leading: ksMainFridgeImage,
+      title: Text(
+        'Name: $name',
+        // snapshot.data!.data[index].name,
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
 
       // ShowcaseService().getShowcaseItems(snapshot.data!.data[index].id, context);

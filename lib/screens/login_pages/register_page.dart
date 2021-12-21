@@ -53,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       vertical: 15.0, horizontal: 30.0),
                   child: Column(
                     children: [
-                      Text('Вход/Регистрация',
+                      Text('Registration',
                           style: TextStyle(
                             color: Color(0xff747373),
                           )),
@@ -94,7 +94,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         controller: passwordCtrl,
                         onSaved: (value) => passwordCtrl.text = value!,
                         decoration: InputDecoration(
-                            labelText: 'Пароль',
+                            labelText: 'Password',
                             labelStyle: TextStyle(
                               color: Color(0xff747373),
                             )),
@@ -153,7 +153,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Container(
                   child: Center(
                     child: Text(
-                      'Отправить',
+                      'Enter',
                       style: TextStyle(
                         color: Colors.white,
                       ),

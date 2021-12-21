@@ -52,14 +52,14 @@ class _LoginPageState extends State<LoginPage> {
                       vertical: 15.0, horizontal: 30.0),
                   child: Column(
                     children: [
-                      Text('Вход/Регистрация',
+                      Text('Login',
                           style: TextStyle(
                             color: Color(0xff747373),
                           )),
                       //styling
                       TextFormField(
                         decoration: InputDecoration(
-                            labelText: 'Номер/email',
+                            labelText: 'Username/email',
                             labelStyle: TextStyle(
                               color: Color(0xff747373),
                             )),
@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                         controller: passwordCtrl,
                         onSaved: (value) => passwordCtrl.text = value!,
                         decoration: InputDecoration(
-                            labelText: 'Пароль',
+                            labelText: 'Password',
                             labelStyle: TextStyle(
                               color: Color(0xff747373),
                             )),
@@ -136,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Container(
                   child: Center(
                     child: Text(
-                      'Отправить',
+                      'Enter',
                       style: TextStyle(
                         color: Colors.white,
                       ),

@@ -23,18 +23,18 @@ class _WelcomePageState extends State<WelcomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Магазин',
+                    'Magazine',
                     style: TextStyle(
                         color: Colors.deepPurple.shade400,
                         fontWeight: FontWeight.bold,
                         fontSize: 30),
                   ),
                   Text(
-                    'Привет!',
+                    'Hello!',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
                   Text(
-                    'Добро пожаловать в магазин',
+                    'Welcome to the Magazine',
                     style: TextStyle(fontSize: 20),
                   ),
                   SizedBox(
@@ -48,19 +48,19 @@ class _WelcomePageState extends State<WelcomePage> {
                     height: 15,
                   ),
                   Text(
-                    '''Скоро вы сможете купить все что захотите, \n        cначала нужно зарегистрироваться''',
+                    '''Soon you will be able to buy anything you want\t first you need to register''',
                     style: TextStyle(fontSize: 15),
                   ),
                   SizedBox(
                     height: 15,
                   ),
                   Text(
-                    '''Нажмите на кнопку "Начать регистрацию",\n                      я принимаю условия''',
+                    '''Click on the "Start registration" button,\n I accept the terms''',
                     style: TextStyle(fontSize: 15),
                   ),
                   InkWell(
                     child: Text(
-                      'Пользовательского соглашения',
+                      'User Agreement',
                       style: TextStyle(color: Colors.lightBlueAccent),
                     ),
                     onTap: () async {
@@ -87,7 +87,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             borderRadius: BorderRadius.circular(10))),
                       ),
                       child: Text(
-                        'Начать регистрацию',
+                        'Start registration',
                         style: TextStyle(color: Colors.white),
                       ),
                       onPressed: () {
@@ -119,7 +119,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             borderRadius: BorderRadius.circular(10))),
                       ),
                       child: Text(
-                        'Войти',
+                        'Login',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),

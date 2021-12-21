@@ -9,7 +9,7 @@ import 'package:java_spring_frontend/screens/home_pages/home_page.dart';
 class SalesService {
   Future<List<SalesModel>> getSales() async {
     http.Response response = await http.get(
-      Uri.parse('http://192.168.1.7:9091/sales/all'),
+      Uri.parse('http://192.168.1.3:9091/sales/all'),
     );
     log("${response.statusCode}");
 
@@ -31,7 +31,7 @@ class SalesService {
     var headers = {"Content-Type": "application/json"};
     var body = jsonEncode({"value": "$price", "salesProduct": "$name"});
     http.Response response = await http.post(
-        Uri.parse('http://192.168.1.7:9091/sales/create'),
+        Uri.parse('http://192.168.1.3:9091/sales/create'),
         headers: headers,
         body: body);
 
@@ -51,7 +51,7 @@ class SalesService {
     var body =
         jsonEncode({"id": "$id", "value": "$price", "salesProduct": "$name"});
     http.Response response = await http.post(
-        Uri.parse('http://192.168.1.7:9091/sales/update'),
+        Uri.parse('http://192.168.1.3:9091/sales/update'),
         headers: headers,
         body: body);
 
